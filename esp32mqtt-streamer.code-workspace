@@ -1,8 +1,20 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"name": "vs1053 Test",
+			"path": "..\\..\\PlatformIO\\Projects\\vs1053 Test"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"array": "cpp",
+			"deque": "cpp",
+			"string": "cpp",
+			"unordered_map": "cpp",
+			"unordered_set": "cpp",
+			"vector": "cpp",
+			"initializer_list": "cpp",
+			"*.tcc": "cpp"
+		}
+	}
 }
