@@ -124,16 +124,7 @@ void setup()
     Serial.print("Connecting to SSID ");
     Serial.println(ssid);
 
-    IPAddress local_IP(192, 168, 222, 195);
-    IPAddress gateway(192, 168, 222, 1);
-    IPAddress subnet(255, 255, 255, 0);
-    IPAddress primaryDNS(8, 8, 8, 8);   //optional
-    IPAddress secondaryDNS(8, 8, 4, 4); //optional
-    // WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS);
     WiFi.begin(ssid, password);
-
-    MQTTClient.setServer(mqtt_server, 1883);
-    MQTTClient.setCallback(callback);
 
     while (WiFi.status() != WL_CONNECTED)
     {
@@ -144,13 +135,10 @@ void setup()
     Serial.println("IP address: ");
     Serial.println(WiFi.localIP());
 
-    playerTask::init();
+    MQTTClient.setServer(mqtt_server, 1883);
+    MQTTClient.setCallback(callback);
 
-    Serial.print("connecting to ");
-    Serial.println(path);
-    //playerTask::setMQTTInstance(MQTTClient);
-    playerTask::setStream(path);
-    playerTask::start();
+    playerTask::init();
 }
 
 void loop()
