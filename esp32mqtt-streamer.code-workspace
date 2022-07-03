@@ -6,6 +6,8 @@
 	],
 	"settings": {
 		"files.associations": {
+			"*.cps": "javascript",
+			"*.h": "c",
 			"array": "cpp",
 			"deque": "cpp",
 			"string": "cpp",
@@ -13,7 +15,8 @@
 			"unordered_set": "cpp",
 			"vector": "cpp",
 			"initializer_list": "cpp",
-			"*.tcc": "cpp"
+			"*.tcc": "cpp",
+			"cstdlib": "cpp"
 		}
 	}
 }
